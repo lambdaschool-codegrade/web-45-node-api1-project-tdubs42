@@ -1,8 +1,4 @@
-// DO NOT MAKE CHANGES TO THIS FILE
-// DO NOT MAKE CHANGES TO THIS FILE
-// DO NOT MAKE CHANGES TO THIS FILE
 const shortid = require('shortid')
-
 const initializeUsers = () => ([
   { id: shortid.generate(), name: 'Ed Carter', bio: 'hero' },
   { id: shortid.generate(), name: 'Mary Edwards', bio: 'super hero' },
@@ -11,8 +7,6 @@ const initializeUsers = () => ([
 // FAKE IN-MEMORY USERS "TABLE"
 let users = initializeUsers()
 
-// DATABASE ACCESS FUNCTIONS
-// DATABASE ACCESS FUNCTIONS
 // DATABASE ACCESS FUNCTIONS
 const find = () => {
   // SELECT * FROM users;
