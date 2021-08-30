@@ -39,9 +39,10 @@ router.post('/', async (req, res, next) => {
 
 router.put('/:id', async (req, res, next) => {
 	try {
+		const validId = await User.findById(req.params.id)
 		if (!req.body.name || !req.body.bio) {
 			res.status(400).json({message: 'Please provide name and bio for the user'})
-		} if (!req.params.id) {
+		} if (!validId) {
 			res.status(404).json({message: 'The user with the specified ID does not exist'})
 		} else {
 			const data = await User.update(req.params.id, req.body)
